@@ -8,4 +8,7 @@ function h($str)
 }
 
 
-
+function sql_error ($stmt) {
+    $error = $stmt->errorInfo();
+    exit("SQL_ERROR:".$error[2]);
+}

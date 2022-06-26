@@ -26,9 +26,12 @@ if($status==false) {
   //Selectデータの数だけ自動でループしてくれる
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
   while( $res = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<p>";
-    $view .= h($res["id"])." : ".h($res["name"]);
-    $view .= "</p>";
+    $view .= '<a href="detail.php?id='.h($res["id"]).'">';
+    $view .= h($res["id"])." : ".h($res["name"])." : ".h($res["comment"])."<br>";
+    $view .= "</a>";
+    $view .= '<a href="delete.php?id='.h($res["id"]).'">';
+    $view .= "[削除]<br>";
+    $view .= "</a>";
   }
 
 }
