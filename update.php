@@ -16,6 +16,8 @@ try {
   exit('DB connectionError:'.$e->getMessage());
 }
 
+sschk();
+
 //３．データ登録SQL作成
 $sql = "update gs_bm_table set name=:name, url=:url, comment=:comment where id=:id";
 $stmt = $pdo->prepare($sql);

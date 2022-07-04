@@ -5,6 +5,8 @@ $id   = $_GET["id"];
 //2. DB接続します
 require_once("funcs.php");
 
+sschk();
+
 //1.  DB接続します
 try {
   //Password:MAMP='root',XAMPP=''

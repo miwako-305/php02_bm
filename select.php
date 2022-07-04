@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require_once("funcs.php");
 
 //1.  DB接続します
@@ -10,6 +11,7 @@ try {
   exit('DB connectionError:'.$e->getMessage());
 }
 
+sschk();
 
 //２．データ取得SQL作成
 $stmt = $pdo->prepare("select * from gs_bm_table");

@@ -7,7 +7,6 @@ $url = $_POST ['url'];
 $comment = $_POST ['comment'];
 
 
-
 //2. DB接続します
 // try catch (catch以下はエラー時の対応)
 try {
@@ -17,6 +16,7 @@ try {
   exit('DB connectionError:'.$e->getMessage());
 }
 
+sschk();
 
 //３．データ登録SQL作成
 // "="は変数を定義する　$stmt の中身に対して何かしたいときには [->],で関数
