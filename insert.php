@@ -11,7 +11,7 @@ $comment = $_POST ['comment'];
 // try catch (catch以下はエラー時の対応)
 try {
   //Password:MAMP='root',XAMPP=''
-  $pdo = new PDO('mysql:dbname=php02_bm;charset=utf8;host=localhost','root','');
+  $pdo = new PDO('mysql:dbname=mw1994_gs_bm_table;charset=utf8;host=mysql57.mw1994.sakura.ne.jp','mw1994','PyS-_EEq6Hj5');
 } catch (PDOException $e) {
   exit('DB connectionError:'.$e->getMessage());
 }

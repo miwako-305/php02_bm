@@ -7,13 +7,12 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES);
 }
 
-
 function db_conn(){
     try {
-        $db_name = "php02_bm";    //データベース名
-        $db_id   = "root";      //アカウント名
-        $db_pw   = "";      //パスワード：XAMPPはパスワード無しに修正してください。
-        $db_host = "localhost"; //DBホスト
+        $db_name = "mw1994_gs_bm_table";    //データベース名
+        $db_id   = "mw1994";      //アカウント名
+        $db_pw   = "PyS-_EEq6Hj5";      //パスワード：XAMPPはパスワード無しに修正してください。
+        $db_host = "mysql57.mw1994.sakura.ne.jp"; //DBホスト
         return new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host, $db_id, $db_pw);
     } catch (PDOException $e) {
       exit('DB Connection Error:'.$e->getMessage());
